@@ -6,11 +6,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
  
-@app.route('/predict-emotion', methods=["POST"])
-def predict_emotion():
-    
-    # Obtenha a entrada de texto do requisição POST 
-    input_text = request.json.get("text")  
+# escrever a rota para predict-emotion
     
     if not input_text:
         response = {

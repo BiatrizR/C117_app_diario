@@ -25,25 +25,9 @@ $(function () {
         }
         console.log(input_data)
 
+        //escrever chamada ajax
         $.ajax({
-            type: 'POST',
-            url: "/predict-emotion",
-            data: JSON.stringify(input_data),
-            dataType: "json",
-            contentType: 'application/json',
-            success: function (result){
-                
-                predicted_emotion = result.data.predicted_emotion
-                emo_url = result.data.predicted_emotion_img_url
           
-                // Resultado recebido do Flask ----->JavaScript
-                $("#prediction").html(predicted_emotion)
-                $('#prediction').css("display", "block")
-                
-                // Exibir resultado usando JavaScript----->HTML
-                $("#emo_img_url").attr('src', emo_url)
-                $('#emo_img_url').css("display", "block")
-
             },
             //Função de erro
             error: function(result){

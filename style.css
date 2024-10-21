@@ -1,0 +1,17 @@
+body{
+    background: black;
+}
+h1{
+    color: aqua;
+}
+
+h2{
+    color: rgb(185, 98, 32);
+}
+
+.pato{
+    color: gold;
+}
+#pato2{
+    color: red;
+}
